@@ -23,7 +23,6 @@ goog.require('BlocklyGames.html');
  */
 Bird.html.start = function(ij) {
   return `
-${BlocklyGames.html.headerBar(ij, BlocklyGames.getMsg('Games.bird', true), '', true, false, '')}
 
 <div id="visualization">
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgBird" width="400px" height="400px">
@@ -35,10 +34,10 @@ ${BlocklyGames.html.headerBar(ij, BlocklyGames.getMsg('Games.bird', true), '', t
     <td style="width: 190px;">
     </td>
     <td>
-      <button id="runButton" class="primary" title="${BlocklyGames.getMsg('Games.runTooltip', true)}">
+      <button id="runButton" style="background-color: #0A1045; color: white;" title="${BlocklyGames.getMsg('Games.runTooltip', true)}">
         <img src="common/1x1.gif" class="run icon21"> ${BlocklyGames.getMsg('Games.runProgram', true)}
       </button>
-      <button id="resetButton" class="primary" style="display: none" title="${BlocklyGames.getMsg('Games.resetTooltip', true)}">
+      <button id="resetButton" style="display: none; background-color: #0A1045; color: white;" title="${BlocklyGames.getMsg('Games.resetTooltip', true)}">
         <img src="common/1x1.gif" class="stop icon21"> ${BlocklyGames.getMsg('Games.resetProgram', true)}
       </button>
     </td>
