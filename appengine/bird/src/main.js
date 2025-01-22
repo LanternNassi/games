@@ -731,6 +731,11 @@ function execute() {
   // alert(result)
   //If result is one the game has succeeded
 
+  if (result != ResultType.SUCCESS) {
+      window.parent.postMessage({ action: 'failed' }, '*');
+  }
+
+
   // log now contains a transcript of all the user's actions.
   // Reset the bird and animate the transcript.
   reset(false);
@@ -759,7 +764,9 @@ function animate() {
   } else if (action[0] === 'finish') {
     displayBird(Pose.SIT);
     BlocklyInterface.saveToLocalStorage();
-    BlocklyCode.congratulations();
+    // BlocklyCode.congratulations();
+    window.parent.postMessage({ action: 'completed' }, '*');
+  
   } else if (action[0] === 'play') {
     BlocklyInterface.workspace.getAudioManager().play(action[1], 0.5);
   }
