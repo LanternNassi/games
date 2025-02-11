@@ -24,7 +24,6 @@ goog.require('BlocklyGames.html');
  */
 Turtle.html.start = function(ij) {
   return `
-${BlocklyGames.html.headerBar(ij, BlocklyGames.getMsg('Games.turtle', true), '', true, true, '')}
 
 <div id="visualization">
   <canvas id="scratch" width=400 height=400 style="display: none"></canvas>
@@ -60,10 +59,10 @@ ${BlocklyGames.html.headerBar(ij, BlocklyGames.getMsg('Games.turtle', true), '',
       <img id="spinner" style="visibility: hidden;" src="common/loading.gif" loading="lazy" height=15 width=15>
     </td>
     <td style="width: 190px; text-align: center">
-      <button id="runButton" class="primary" title="${BlocklyGames.getMsg('Games.runTooltip', true)}">
+      <button id="runButton" style="background-color: #0A1045; color: white;" title="${BlocklyGames.getMsg('Games.runTooltip', true)}">
         <img src="common/1x1.gif" class="run icon21"> ${BlocklyGames.getMsg('Games.runProgram', true)}
       </button>
-      <button id="resetButton" class="primary" style="display: none" title="${BlocklyGames.getMsg('Games.resetTooltip', true)}">
+      <button id="resetButton" style="display: none; background-color: #0A1045; color: white;" title="${BlocklyGames.getMsg('Games.resetTooltip', true)}">
         <img src="common/1x1.gif" class="stop icon21"> ${BlocklyGames.getMsg('Games.resetProgram', true)}
       </button>
     </td>

@@ -848,10 +848,14 @@ function checkAnswer() {
     if (BlocklyGames.LEVEL < BlocklyGames.MAX_LEVEL) {
       // No congrats for last level, it is open ended.
       BlocklyInterface.workspace.getAudioManager().play('win', 0.5);
-      BlocklyCode.congratulations();
+      window.parent.postMessage({ action: 'completed' }, '*');
+
+      // BlocklyCode.congratulations();
     }
   } else {
     penColour('#ff0000');
+    window.parent.postMessage({ action: 'failed' }, '*');
+
   }
 }
 
