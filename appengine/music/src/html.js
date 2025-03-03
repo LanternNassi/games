@@ -24,7 +24,6 @@ goog.require('BlocklyGames.html');
  */
 Music.html.start = function(ij) {
   return `
-${BlocklyGames.html.headerBar(ij, BlocklyGames.getMsg('Games.music', true), '', true, true, '')}
 
 <div id="paddingBox"></div>
 <div id="staveBox"></div>
@@ -59,10 +58,10 @@ ${BlocklyGames.html.headerBar(ij, BlocklyGames.getMsg('Games.music', true), '', 
       <img id="spinner" style="visibility: hidden;" src="common/loading.gif" loading="lazy" height=15 width=15>
     </td>
     <td style="width: 190px; text-align: center">
-      <button id="runButton" class="primary" title="${BlocklyGames.getMsg('Games.runTooltip', true)}">
+      <button id="runButton" style="background-color: #0A1045; color: white;" class="primary" title="${BlocklyGames.getMsg('Games.runTooltip', true)}">
         <img src="common/1x1.gif" class="run icon21"> ${BlocklyGames.getMsg('Games.runProgram', true)}
       </button>
-      <button id="resetButton" class="primary" style="display: none" title="${BlocklyGames.getMsg('Games.resetTooltip', true)}">
+      <button id="resetButton" class="primary" style="display: none; background-color: #0A1045; color: white;" title="${BlocklyGames.getMsg('Games.resetTooltip', true)}">
         <img src="common/1x1.gif" class="stop icon21"> ${BlocklyGames.getMsg('Games.resetProgram', true)}
       </button>
     </td>

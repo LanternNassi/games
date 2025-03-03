@@ -24,8 +24,6 @@ goog.require('BlocklyGames.html');
  */
 Movie.html.start = function(ij) {
   return `
-${BlocklyGames.html.headerBar(ij, BlocklyGames.getMsg('Games.movie', true), '', true, true, '')}
-
 <div id="visualization">
   <div id="coordinates">
     <span id="x"></span>
@@ -74,7 +72,7 @@ Movie.html.gallery_ = function(lang) {
       <form action="/gallery" target="movie-gallery">
         <input type="hidden" name="app" value="movie">
         <input type="hidden" name="lang" value="${lang}">
-        <button type="submit" title="${BlocklyGames.getMsg('Movie.galleryTooltip', true)}">
+        <button type="submit"  title="${BlocklyGames.getMsg('Movie.galleryTooltip', true)}">
           <img src="common/1x1.gif" class="gallery icon21"> ${BlocklyGames.getMsg('Movie.galleryMsg', true)}
         </button>
       </form>

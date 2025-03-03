@@ -174,6 +174,7 @@ function init() {
   BlocklyCode.importPrettify();
 
   BlocklyGames.bindClick('helpButton', showHelp);
+  
   if (location.hash.length < 2 &&
       !BlocklyGames.loadFromLocalStorage(BlocklyGames.storageName,
                                          BlocklyGames.LEVEL)) {
