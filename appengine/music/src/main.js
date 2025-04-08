@@ -200,7 +200,7 @@ function importSounds() {
   //  src="third-party/SoundJS/soundjs.min.js"></script>
   const script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src = 'third-party/SoundJS/soundjs.min.js';
+  script.src = 'third-party/SoundJS/lib/soundjs.min.js';
   script.onload = registerSounds;
   document.head.appendChild(script);
 }
@@ -653,8 +653,11 @@ function tick() {
       if (BlocklyGames.LEVEL < BlocklyGames.MAX_LEVEL) {
         // No congrats for last level, it is open ended.
         Music.startCount.set(0);
-        BlocklyCode.congratulations();
+        // BlocklyCode.congratulations();
+        window.parent.postMessage({ action: 'completed' }, '*');
       }
+    }else {
+      window.parent.postMessage({ action: 'failed' }, '*');
     }
     BlocklyGames.getElementById('spinner').style.visibility = 'hidden';
     BlocklyInterface.workspace.highlightBlock(null);
